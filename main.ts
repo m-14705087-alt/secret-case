@@ -1,0 +1,10 @@
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    servos.P0.setAngle(90)
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    servos.P0.setAngle(0)
+})
+pins.digitalWritePin(DigitalPin.P1, 1)
